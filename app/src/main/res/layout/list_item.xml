@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <ImageView
+            android:contentDescription="carImage"
+            android:background="@drawable/baseline_broken_image_24"
+            android:id="@+id/car_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+        <TextView
+            android:id="@+id/car_make"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:hint="car name"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toEndOf="@+id/car_image"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+        <TextView
+            android:id="@+id/car_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="10dp"
+            android:hint="car model"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toEndOf="@+id/car_image"
+            app:layout_constraintTop_toBottomOf="@+id/car_make" />
+
+        <Button
+            android:id="@+id/add_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="18dp"
+            android:text="Add Image"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintStart_toEndOf="@+id/car_image"
+            app:layout_constraintTop_toBottomOf="@+id/car_model"/>
+
+        <Button
+            android:id="@+id/delete_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="5dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toEndOf="@+id/add_image"
+            app:layout_constraintTop_toBottomOf="@+id/car_model"
+            app:layout_constraintVertical_bias="0.294" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
